@@ -20,6 +20,13 @@ class Route{
   }
 }
 
+class Location{
+  constructor(horizontal, vertical){
+    this.horizontal = horizontal;
+    this.vertical = vertical;
+  }
+}
+
 
 
 
