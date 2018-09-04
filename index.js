@@ -15,16 +15,12 @@ class Driver{
 
 class Route{
   constructor(beginningLocation,endingLocation){
-	  this.beginningLocation = new Location();
-    this.endingLocation = new Location();
+	  this.beginningLocation = beginningLocation;
+    this.endingLocation = endingLocation;
   }
 }
 
-class Location{
-  constructor(horizontal, vertical){
-    this.horizontal = horizontal;
-    this.vertical = vertical;
-  }
+
 }
 
 
