@@ -14,11 +14,13 @@ class Driver{
 }
 
 class Route{
-  constructor(beginningLocation,startDate){
-	  this.name = name;
-    this.startDate = new Date(startDate);
+  constructor(beginningLocation,endingLocation){
+	  this.beginningLocation = name;
+    this.endingLocation = new Date(startDate);
   }
 }
+
+
 
 
 
