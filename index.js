@@ -20,6 +20,9 @@ class Route{
   }
 }
 
+blocksTravelled(){
+  
+}
 
 }
 
