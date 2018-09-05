@@ -50,15 +50,12 @@ class Route{
   return horizontalBlocks + verticalBlocks;
   }
   
-  estimatedTime() {
-    var d = new Date(); 
-    var hours = d.getHours();
-
-    if (hours >= 6 && hours < 10 || hours >=16 && hours < 20) {
-      return this.blocksTravelled(this.beginningLocation, this.endingLocation)/2;
-    }
-    else {
-      return this.blocksTravelled(this.beginningLocation, this.endingLocation)/3
+  estimatedTime(isPeakHour) {
+        console.log(this.blocksTravelled())
+    if(isPeakHour === undefined) {
+      return this.blocksTravelled()/3;
+    } else {
+      return this.blocksTravelled()/2;
     }
   }
 }
