@@ -26,28 +26,13 @@ class Route{
 
 
   blocksTravelled() {
-    let startingHorizontal = eastWest.indexOf(this.beginningLocation.horizontal);
-    let endingHorizontal = eastWest.indexOf(this.endingLocation.horizontal);
-    let horizontalBlocks;
-    if (startingHorizontal > endingHorizontal) {
-      horizontalBlocks = startingHorizontal - endingHorizontal;
-    } else if (startingHorizontal < endingHorizontal) {
-      horizontalBlocks = endingHorizontal - startingHorizontal;
-    } else {
-      horizontalBlocks = 0;
-    }
-  let startingVertical = parseInt(this.beginningLocation.vertical);
-  let endingVertical = parseInt(this.endingLocation.vertical);
-  let verticalBlocks;
+        const streetBlockTravelled = Math.abs(parseInt(this.endingLocation.vertical) - parseInt(this.beginningLocation.vertical));
 
-  if (startingVertical > endingVertical) {
-    verticalBlockscks = startingVertical - endingVertical;
-  } else if (endingVertical > startingVertical) {
-      verticalBlocks = endingVertical - startingVertical;
-  } else {
-    verticalBlocks = 0;
-  }
-  return horizontalBlocks + verticalBlocks;
+    let eastWest = ['1st Avenue', '2nd Avenue', '3rd Avenue', 'Lexington Avenue', 'Park', 'Madison Avenue', '5th Avenue'];
+
+    const avenueBlockTravelled = Math.abs(eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal));
+
+    return streetBlockTravelled + avenueBlockTravelled;
   }
   
   estimatedTime(isPeakHour) {
