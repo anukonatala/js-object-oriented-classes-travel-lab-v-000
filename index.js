@@ -51,7 +51,6 @@ class Route{
   }
   
   estimatedTime(isPeakHour) {
-        console.log(this.blocksTravelled())
     if(isPeakHour === undefined) {
       return this.blocksTravelled()/3;
     } else {
